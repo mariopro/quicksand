@@ -1,6 +1,6 @@
 <?php
 
-namespace Tightenco\Quicksand;
+namespace MarioPro\Quicksand;
 
 use Illuminate\Support\ServiceProvider;
 
