@@ -10,22 +10,22 @@ Quicksand is an Artisan command that you can run in your scheduler daily.
 
 ## Requirements
 
-- If you are using Laravel 5.6 or higher, use version `2.0` of this package.
-- If you are using Laravel 5.5 and running PHP 7.1 or higher, use version `1.0` of this package.
+- If you are using Laravel 5.6 or higher, use version `3.0` of this package.
+- If you are using Laravel 5.5 and running PHP 7.1 or higher, use version `3.0` of this package.
 - If you are using Laravel 5.4 or lower, or PHP 7.0 or lower, please use version `0.2` of this package.
 
 ## Installation
 
-1. Add Quicksand to your Composer file: `composer require tightenco/quicksand`
-2. Register the Quicksand Service provider in `config/app.php` (you can skip this step if you're using Laravel 5.5 or higher due to package auto-discovery):
+1. Add Quicksand to your Composer file: `composer require mariopro/quicksand`
+2. Register the Quicksand Service provider in `config/app.php` (you can skip this step if you're using Laravel 12.0 or higher due to package auto-discovery):
 
     ```php
     'providers' => [
         ...
 
-        Tightenco\Quicksand\QuicksandServiceProvider::class,
+        MarioPro\Quicksand\QuicksandServiceProvider::class,
     ```
-3. Publish your config: `php artisan vendor:publish --provider="Tightenco\Quicksand\QuicksandServiceProvider"`
+3. Publish your config: `php artisan vendor:publish --provider="MarioPro\Quicksand\QuicksandServiceProvider"`
 4. Edit your config. Define which classes and/or pivot tables you'd like to have Quicksand clean up for you, how many days Quicksand should wait to clean up, and whether or not the results should be logged. The default `'days'` until cleaning up is overridable by specifying a `'days'` key when registering a model or pivot table:
 
     1. _Note: Quicksand will disregard any global scopes applied to models when deleting._
@@ -57,7 +57,7 @@ Quicksand is an Artisan command that you can run in your scheduler daily.
     ```
 ### Using a Custom Log File
 
-If you are using Laravel 5.6 or higher, you can customize the logger Quicksand uses by adding a `quicksand` channel to your `logging.php` config file like so:
+If you are using Laravel 12.0 or higher, you can customize the logger Quicksand uses by adding a `quicksand` channel to your `logging.php` config file like so:
 
 ```php
 'channels' => [
@@ -70,7 +70,7 @@ If you are using Laravel 5.6 or higher, you can customize the logger Quicksand u
 ]
 ```
 
-If you are using Laravel 5.5 or lower, you can customize the logger Quicksand uses by editing the `custom_log_file` option in your `quicksand.php` config file.
+If you are using Laravel 12.0 or lower, you can customize the logger Quicksand uses by editing the `custom_log_file` option in your `quicksand.php` config file.
 
 By default, Quicksand will log to the standard `laravel.log` file.
 
@@ -80,12 +80,11 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Benson Lee** - [besologic](https://github.com/besologic)
-* **Matt Stauffer** - [mattstauffer](https://github.com/mattstauffer)
+* **Mario Pro** - [mariopro](https://github.com/bmariopro
 
-See also the list of [contributors](https://github.com/tighten/quicksand/graphs/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/mariopro/quicksand/graphs/contributors) who participated in this project.
 
-This package is developed and maintained by [Tighten](https://tighten.co).
+This package is developed and maintained by [Mario Pro](https://github.com/mariopro).
 
 ## Testing
 You can test this package by running
