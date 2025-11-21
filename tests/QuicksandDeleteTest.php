@@ -9,7 +9,7 @@ use Models\Car;
 use Monolog\Logger;
 use Monolog\Handler\TestHandler;
 use Orchestra\Testbench\TestCase;
-use Tightenco\Quicksand\DeleteOldSoftDeletes;
+use MarioPro\Quicksand\DeleteOldSoftDeletes;
 
 class QuicksandDeleteTest extends TestCase
 {
